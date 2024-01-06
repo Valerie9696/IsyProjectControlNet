@@ -1,4 +1,3 @@
-import pandas as pd
 import pyarrow.parquet as pq
 import os
 from PIL import Image
@@ -15,10 +14,7 @@ target_dir = os.path.join(poses_dir, 'target')
 if not os.path.isdir(target_dir):
     os.mkdir(target_dir)
 
-
 table = pq.read_table('poses.parquet').to_pandas()
-a =0
-
 line = {}
 counter = 0
 prompts = []
